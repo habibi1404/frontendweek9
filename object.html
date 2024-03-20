@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object fundamentals</title>
+</head>
+<body>
+    
+
+</body>
+
+<script>
+    const teacher = {
+        name: 'henry',
+        course: 'backend',
+        age: 11,
+        likes: ['gym','food','music'],
+        for: 'univelcity',
+        'state of origin': 'edo',
+        statement: function(){
+            return `I am ${this.name},a ${this.course} facilitator working at ${this.for}. I love ${this.likes[Math.floor(Math.random()*this.likes.length)]}.`
+        }
+    }
+    const person = object()
+
+    person.name = 'francis'
+
+    teacher.surname = 'agbonlahor'
+    teacher.age = 50
+
+    //constructor function
+    function Teacher(name, town, course){
+        this.name = name
+        this.town = town
+        this.course = course
+    }
+
+    const teacher2 = new Teacher('francis','lagos','frontend')
+    const teacher1 = new Teacher('sir kay','lagos','product design')
+</script>
+</html>

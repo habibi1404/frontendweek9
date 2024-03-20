@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+   <div>
+    <input type="text" name="text" id="text" placeholder="enter a text">
+    <p></p>
+   </div> 
+</body>
+<script>
+    const para = document.querySelector('p')
+    const input = document.querySelector('input')
+
+    const first = 'abcdefghijklm'
+    const last = 'nopqrstuvwxyz'
+
+    function ceaser(){
+        const arr = []
+        for (let x = 0; x < (input.value).length; x++){
+            if(first.includes((input.value)[x])){
+                arr.push(last.charAt(first.indexOf(input.value[x])))
+            }
+            else if(last.includes((input.value)[x])){
+                arr.push(first.charAt(last.indexOf(input.value[x])))
+            }
+            else{
+                arr.push((input.value[x]))
+            }
+        }
+        para.textContent = arr.join('')
+    }
+
+    input.addEventListener('input', ceaser)   
+</script>
+</html>
